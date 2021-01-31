@@ -119,20 +119,19 @@ html {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
-.contact-header-item > .link-header:hover,
-.contact-header-item > .link-header:focus {
+
+.link-header:hover,
+.link-header:focus {
   color: var(--accent-color);
 }
-/* 
-.contacts-item > .link:hover,
-.contacts-item > .link:focus {
-    color: var(--accent-color);
+.clients-icon {
+  fill: currentColor;
 }
- */
+
 .heder-icon {
   display: inline-block;
   margin-right: 10px;
-  fill: var(--text-color);
+  fill: currentColor;
   box-sizing: border-box;
 }
 /* ========== END HEADER ========== */
