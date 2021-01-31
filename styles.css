@@ -7,12 +7,9 @@
   --accent-background: #2f303a;
   --second-text-color: #ffffff;
   --section-team-color: #f5f4fa;
+  --icons-color: #afb1b8;
 }
 
-/* Убираем маркировку ссылок */
-ul {
-  list-style-type: none;
-}
 /* Убираем подчеркивание у ссылок */
 a {
   text-decoration: none;
@@ -28,6 +25,13 @@ h4,
 h5,
 h6,
 p {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+.item {
+  padding: 0;
   margin: 0;
 }
 body {
@@ -48,25 +52,23 @@ html {
 /* ========== HEADER ========== */
 .header {
   border-bottom: 1px solid #ececec;
-  min-height: 80px;
 }
 .navigation {
   display: flex;
+  align-items: center;
 }
 .main-nav {
   display: flex;
   align-items: center;
 }
 .logotype {
+  display: inline-block;
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  height: 31px;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 .logotype:focus,
 .logotype:hover {
@@ -77,10 +79,7 @@ html {
 }
 .navigation-list {
   display: flex;
-
-  align-items: center;
-  padding: 0;
-  margin-left: 40px;
+  margin-left: 93px;
 }
 .navigation-list-item:not(:last-child) {
   margin-right: 50px;
@@ -105,13 +104,16 @@ html {
 }
 .contact-header-list {
   display: flex;
-  padding: 0;
-  margin: 0;
   margin-left: auto;
-  justify-content: flex-end;
 }
 .contact-header-item:not(:last-child) {
   margin-right: 50px;
+}
+.tel-link-header {
+  padding: 32px 0;
+}
+.mail-link-header {
+  padding: 32px 0;
 }
 .mail-link-header,
 .tel-link-header {
@@ -122,25 +124,38 @@ html {
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
-.mail-link-header:hover,
-.mail-link-header:focus {
+.mail-link-header > .contact-heder-icon:hover,
+.mail-link-header > .contact-heder-icon:focus {
   color: var(--accent-color);
 }
-.tel-link-header:hover,
-.tel-link-header:focus {
+.tel-link-header > .contact-heder-icon:hover,
+.tel-link-header > .contact-heder-icon:focus {
   color: var(--accent-color);
 }
-.main-nav {
-  width: 1170px;
+.contact-heder-icon {
+  display: inline-block;
+  margin-right: 10px;
+  fill: var(--text-color);
+  box-sizing: border-box;
 }
 /* ========== END HEADER ========== */
 /* ========== HERO ========== */
 
 .hero {
   background-color: var(--accent-background);
-  min-height: 200px;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(./img/herobg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding: 200px 0px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-title {
   max-width: 696px;
@@ -172,6 +187,7 @@ html {
   border-radius: 4px;
   white-space: nowrap;
   cursor: pointer;
+  border: transparent;
 }
 .modal-btn :hover,
 .modal-btn :focus {
@@ -208,6 +224,29 @@ html {
 }
 .benefits-list-item:not(:last-child) {
   margin-right: 30px;
+}
+.benefits-list-item::before {
+  content: "";
+  display: block;
+  height: 120px;
+  background-color: var(--section-team-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: center;
+}
+.benefits-list-item.antenna::before {
+  background-image: url("./img/antenna.svg");
+}
+.benefits-list-item.clock::before {
+  background-image: url("./img/clock.svg");
+}
+.benefits-list-item.diagram::before {
+  background-image: url("./img/diagram.svg");
+}
+.benefits-list-item.astronaut::before {
+  background-image: url("./img/astronaut.svg");
 }
 /* ========== END BENEFITS  ========== */
 
@@ -279,8 +318,69 @@ html {
   text-align: center;
   letter-spacing: 0.03em;
   margin-top: 10px;
+  margin-bottom: 16px;
 }
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--icons-color);
+}
+.social-link-ikon {
+  fill: currentColor;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+  color: var(--second-text-color);
+}
+
 /* ==========  AND TEAM  ========== */
+/* ==========  CLIENT  ========== */
+.client-list {
+  display: flex;
+}
+.client-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.client-list-item {
+  width: 170px;
+  height: 90px;
+}
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(175, 177, 184, 1);
+  border-radius: 4px;
+  color: var(--icons-color);
+}
+.client-icon {
+  fill: currentColor;
+}
+.client {
+  padding: 94px 0;
+}
+.client-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+/* ==========  AND CLIENT  ========== */
 /* ==========  PORTFOLIO  ========== */
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -391,10 +491,6 @@ img {
   height: 31px;
   margin-bottom: 20px;
 }
-.contact-footer-list {
-  padding-left: 0;
-  margin: 0;
-}
 .logotype-footer:focus,
 .logotype-footer:hover {
   color: var(--accent-color);
@@ -424,5 +520,42 @@ img {
 }
 .contact-footer-item {
   height: 21px;
+}
+.footer-social-title {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--second-text-color);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.footer-content {
+  display: flex;
+}
+.footer-social {
+  margin-left: 70px;
+}
+.footer-cocial-list {
+  display: flex;
+}
+.footer-list-items:not(:last-child) {
+  margin-right: 10px;
+}
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--second-text-color);
+}
+.footer-social-icon {
+  fill: currentColor;
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--accent-color);
 }
 /* ==========  AND FOOTER  ========== */ ;
