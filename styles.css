@@ -43,7 +43,7 @@ html {
   box-sizing: border-box;
 }
 .conteiner {
-  width: 1170px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -91,8 +91,8 @@ html {
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .navigation-list-link:hover,
@@ -109,30 +109,27 @@ html {
 .contact-header-item:not(:last-child) {
   margin-right: 50px;
 }
-.tel-link-header {
+.link-header {
   padding: 32px 0;
 }
-.mail-link-header {
-  padding: 32px 0;
-}
-.mail-link-header,
-.tel-link-header {
-  color: var(--title-text-color);
+.link-header {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
   letter-spacing: 0.02em;
   color: var(--text-color);
 }
-.mail-link-header > .contact-heder-icon:hover,
-.mail-link-header > .contact-heder-icon:focus {
+.contact-header-item > .link-header:hover,
+.contact-header-item > .link-header:focus {
   color: var(--accent-color);
 }
-.tel-link-header > .contact-heder-icon:hover,
-.tel-link-header > .contact-heder-icon:focus {
-  color: var(--accent-color);
+/* 
+.contacts-item > .link:hover,
+.contacts-item > .link:focus {
+    color: var(--accent-color);
 }
-.contact-heder-icon {
+ */
+.heder-icon {
   display: inline-block;
   margin-right: 10px;
   fill: var(--text-color);
@@ -430,6 +427,14 @@ input[type="radio"].visually-hidden {
   outline: 1px solid #eeeeee;
   width: 370px;
 }
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-link {
+  display: block;
+}
 .portfolio-list-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
@@ -437,10 +442,6 @@ input[type="radio"].visually-hidden {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  box-sizing: border-box;
 }
 
 .portfolio-text {
@@ -453,6 +454,8 @@ input[type="radio"].visually-hidden {
 .filter-button:focus {
   color: var(--second-text-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-subtitle {
   font-weight: 700;
