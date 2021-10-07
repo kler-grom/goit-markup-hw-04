@@ -328,7 +328,7 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="conteiner footer-content">
-            <div footer-address>
+            <div class="footer-address">
                 <a class="logotype-footer" href="./index.html" lang="en">
                     <span class="logo-part-one">Web</span>Studio
                 </a>
@@ -379,10 +379,21 @@
                         </a>
                     </li>
                 </ul>
-
             </div>
         </div>
-    </footer>
+<!-- </div> -->
+    </footer>  
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="close-btn" data-modal-close>
+                <svg class="close-icon" width="11" height="11">
+                    <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+            </button>
+    
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
