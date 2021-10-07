@@ -44,10 +44,12 @@ html {
 }
 .conteiner {
   width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.section {
+  padding: 94px 0;
 }
 /* ========== HEADER ========== */
 .header {
@@ -79,6 +81,7 @@ html {
 }
 .navigation-list {
   display: flex;
+  align-items: center;
   margin-left: 93px;
 }
 .navigation-list-item:not(:last-child) {
@@ -248,8 +251,7 @@ html {
 
 /* ========== ABOUT US  ========== */
 .about {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 .about-list {
   display: flex;
@@ -274,13 +276,9 @@ html {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
-  min-height: 42px;
-  margin-top: 0;
 }
 .team {
   background-color: var(--section-team-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .team-card-text {
   padding: 30px 15px;
